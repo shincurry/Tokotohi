@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Tokotohi</title>
+        <script type="text/javascript" src="/hitokoto?callback=setHitokoto"></script>
+    </head>
+
+    <body>
+        <div id="hitokoto">
+            <span id="content"></span><span id="source"></span>
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+	setTimeout(function() {
+		var scr = document.createElement('script');
+		scr.setAttribute('src','/hitokoto?callback=setHitokoto');
+		document.body.appendChild(scr);
+	},100);
+    
+    function setHitokoto(res) {
+        document.getElementById('content').innerHTML = '「' + res.content + '」';
+        if (res.source != "") {
+            document.getElementById('source').innerHTML = res.source;
+        }
+        document.getElementById('hitokoto').style.opacity = 1;
+    }
+    
+</script>
