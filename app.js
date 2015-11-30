@@ -8,6 +8,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/hitokoto', function(req, res) {
+	hitokoto.setBlockedWords(['仙剑奇侠传']);
 	hitokoto.getData(function(data) {
 		res.jsonp(data);
 	});

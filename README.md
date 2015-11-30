@@ -36,6 +36,12 @@ function setHitokoto(res) {
 3. `hitokoto.getData(function(data) { // do something... });`
 4. Done.
 
+### block some keywords
+
+```
+setBlockedWords(array); // Array params
+```
+
 ## Data Object Schema Example
 
 ```
@@ -90,6 +96,12 @@ function setHitokoto(res) {
 1. 拷贝 `module` 文件夹到你自己的项目目录
 2. 导入 Module `var hitokoto = require('./modules/hitokoto');`
 3. 调用 `hitokoto.getData(function(data) { // do something... });`
+
+### 屏蔽某些关键词
+
+```
+setBlockedWords(array); // 传入一个数组
+```
 
 ## 获取数据的对象模型［舍去了部分无用数据］
 
